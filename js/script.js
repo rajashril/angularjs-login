@@ -1,9 +1,9 @@
 angular.module('AngularJSLogin', [])
 .controller('AngularSessionController', ['$scope', '$http', function($scope, $http) {
 
-	$scope.loginForm = function() {
+	this.loginForm = function() {
 
-		var user_data='user_email=' +$scope.inputData.email+'&user_password='+$scope.inputData.password;
+		var user_data='user_email=' +this.inputData.email+'&user_password='+this.inputData.password;
 
 		$http({
 			method: 'POST',
@@ -21,9 +21,9 @@ angular.module('AngularJSLogin', [])
 		})
 	}
 
-	$scope.signUpForm = function() {
+	this.signUpForm = function() {
 
-		var user_data='user_email=' +$scope.inputData.email+'&user_password='+$scope.inputData.password+'&user_fname=' +$scope.inputData.fname+'&user_lname='+$scope.inputData.lname;
+		var user_data='user_email=' +this.inputData.email+'&user_password='+this.inputData.password+'&user_fname=' +this.inputData.fname+'&user_lname='+this.inputData.lname;
 
 		$http({
 			method: 'POST',
