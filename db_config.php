@@ -6,7 +6,7 @@ File:       db_config.php
 $DB_host = "localhost";
 $DB_user = "root";
 $DB_pass = "root";
-$DB_name = "angularjs-login";
+$DB_name = "angular-js-apps";
 //Connect with database
 try
 {
